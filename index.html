@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyLab</title>
+    <script src="https://kit.fontawesome.com/165eab2211.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,700&family=Tinos:wght@400;700&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            /* box-sizing: border-box; */
+            
+        }
+        
+
+        /* MENUBAR */
+        .menubar {
+
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 40px;
+            align-content: center;
+            align-items: center;
+            /* padding-right: 180px; */
+        }
+
+        .menubar a {
+            text-decoration: none;
+        }
+
+        .menusideleft>a {
+            font-family: poppins;
+            text-transform: capitalize;
+            color: white;
+            background: rgb(200, 77, 231);
+            background: linear-gradient(69deg, rgba(200, 77, 231, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            font-size: 1.8em;
+            padding: 10px 35px;
+            font-weight: 700;
+        }
+
+        .menusideright>a {
+            font-family: poppins;
+            text-transform: capitalize;
+            color: black;
+            font-size: 1.1em;
+            margin-left: 30px;
+            font-weight: 500;
+
+        }
+
+        .menusideright>a:hover {
+            color: #297ce5;
+            transition-duration: 0.2s;
+        }
+
+        /* manubar */
+
+        .container {
+            /* background-color: antiquewhite; */
+            margin: 40px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            column-gap: 100px;
+            row-gap: 80px;
+            justify-content: center;
+            /* align-items: center;
+            align-content: center; */
+
+            
+        }
+
+        .leftSection {
+            /* border: 1px solid red; */
+            /* background-color: beige; */
+           /* padding-right: 100px; */
+            margin-top: 50px;
+            /* width: 0%; */
+            width: 700px;
+            line-height: 30px;
+        }
+        .leftSection h5{
+            font-family: poppins;
+            color: #297ce5;
+            font-size: 16px;
+        }
+        .leftSection h1{
+            font-family: poppins;
+             color: #323333 ;
+             margin-top: 20px;
+             font-size: 2.5rem;
+             line-height: 60px;
+             font-weight: 500;
+        }
+        .leftSection p{
+            font-family: poppins;
+            color: #999999;
+            font-weight: 500;
+            margin-top: 30px;
+            font-size: 20px;
+            line-height: 35px;
+        }
+        .leftSection img{
+            float: left;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin-top: 30px;
+            width: 200px;
+            margin-right: 30px;
+        }
+        .leftSection img:hover{
+            cursor: pointer;
+        }
+        .leftSection h3{
+            font-family: poppins;
+            font-weight: 500;
+            color: #323333;
+        }
+
+
+        .rightSection {
+            /* background-color: #d87f7f; */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            row-gap: 40px;
+            /* column-gap: 40px; */
+            
+
+        }
+        .uppercards{
+            /* border: 1px solid yellow; */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* background-color: aquamarine; */
+            column-gap: 40px;
+            justify-content: center;
+            row-gap: 40px;
+        }
+        .lowercards{
+            /* border: 1px solid green; */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* background-color: #ff3e3e; */
+            column-gap: 40px;
+            justify-content: center;
+            row-gap: 40px;
+            
+        }
+        .cards{
+           
+            width: 200px;
+            padding: 60px 30px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+       
+        .cards img{
+            width: 100px;
+            
+        }
+        .cards h2{
+            font-family: poppins;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+        .cards p{
+            font-family: poppins;
+            font-weight: 400;
+            color: #999999;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .btm{
+            display: flex;
+            align-items: center;
+            text-align: left;
+            
+        }
+        .menusideright i{
+            display: none;
+        }
+        @media screen and (max-width : 815px) {
+            .menusideright i{
+                display: inline-block;
+                height: 20px;
+                
+            }
+            .menusideright a{
+                display: none;
+                
+            }
+            .menusideright i:hover{
+                color: #297ce5;
+            }
+            
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="menubar">
+        <div class="menusideleft"><a href="#">StudyLab</a></div>
+        <div class="menusideright"><a href="#">Home</a><a href="#">About</a><a href="#">Course</a><a
+                href="#">Instructor</a><a href="#">Blog</a><a href="#">Contact</a> <i class="fa-solid fa-bars"></i></div>
+    </nav>
+    <!-- navbar completed  -->
+
+    <div class="container">
+        <div class="leftSection">
+            <h5>WELCOME TO STUDYLAB</h5>
+            <h1>We Are StudyLab An Online <br> Learning Center</h1>
+            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
+                paradisematic country, in which roasted parts of sentences fly into your mouth. <br><br>
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                ocean.</p>
+            <div class="btm"><img src="https://drive.google.com/file/d/13mUAc8KZq6NrCqhpOJHKyT7sEOhHcxMj/view?usp=sharing" alt="">
+            <h3>Learn Anything From StudyLab <br> Watch Video</h3></div>
+        </div>
+        <div class="rightSection">
+            <div class="uppercards">
+                <div class="cards"><img src="https://drive.google.com/file/d/1K7XaH_DVuOhw5uj2k3aidwlZnLD5UldU/view?usp=sharing" alt="">
+                    <h2>Top Quality Content</h2>
+                    <p>A small river named Duden flows by their place and supplies</p>
+                </div>
+                <div class="cards"><img src="https://drive.google.com/file/d/1d2LnOy7UzE24U6-gtv3oTwSL4lMCOoE7/view?usp=sharing" alt="">
+                    <h2>Highly Skilled Instructor</h2>
+                    <p>A small river named Duden flows by their place and supplies</p>
+                </div>
+            </div>
+            <div class="lowercards">
+                <div class="cards"><img src="https://drive.google.com/file/d/147jdyEVSecPApX54qOM5KrgIB_m-XCEb/view?usp=sharing" alt="">
+                    <h2>World Class & Quiz</h2>
+                    <p>A small river named Duden flows by their place and supplies</p>
+                </div>
+                <div class="cards"><img src="https://drive.google.com/file/d/1u2jN1s9bVRhVmm7hye2i5j9PDw2DbL3c/view?usp=sharing" alt="">
+                    <h2>Get Certified</h2>
+                    <p>A small river named Duden flows by their place and supplies</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
